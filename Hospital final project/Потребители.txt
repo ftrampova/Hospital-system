@@ -1,0 +1,17 @@
+INSERT INTO doctors (Name, Phone, Email, Password) VALUES 
+('Dr. John Doe', '1234567890', 'john.doe@example.com', '$2y$10$DvLHI/OVKF5ATBS1emYj1eeSrhd1eECmN/Si0CU5AWrYQlxd8JdxO'); парола 12345678
+
+INSERT INTO nurses(Name, Phone, Email, Password) VALUES 
+('Aneta Ivanova', '1234567560', 'AnetaI@example.com', '$2y$10$0AOWpfQmgDZF.rL2/eHgtu627BaNu/Umnr7DQWODFmylr50jA8.PS');  парола
+AniAniAni
+
+INSERT INTO administrators (Name, Phone, Email, Password) VALUES 
+('Ivana Ivanova', '1234907560', 'Ivana@example.com', '$2y$10$GEL82wrlk0ucNUaz1xd40eoFjRWpmljsb/lLFlAZXylS.phpF5wSy');  парола
+Ivana888
+
+
+INSERT INTO maintenance (Name, Phone, Email, Password) VALUES 
+('Hristiyana Svecheva', '5634907560', 'Hrisi@example.com', $2y$10$rsnsfEwZxUWtCIxKUslcNOJlXWexNv5D5ugm3DdI3QmTPrpEL23g2');  парола
+Hrisitoo
+
+

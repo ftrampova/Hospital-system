@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Болница "Естетик Мед"</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ff6666;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="classes.html">Директор</a></li>
+                    <li><a href="patient.html">Пациенти</a></li>
+                    <li class="dropdown">
+                        <a href="departments.html" class="dropbtn">Отделения</a>
+                        <div class="dropdown-content">
+                            <a href="department_surgery.php">Хирургия</a>
+                            <a href="department_cardiology.php">Кардиология</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>   
+        <h1>Отделение "Онкология"</h1>
+    </section>
+
+    <!------- За нас content -------->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Доц. д-р Виолета Николова</h1>     
+                <p>Доц. д-р Николова е началник на Отделение по медицинска онкология и председател на Българско Научно дружество по Имуно-онкология. Тя е хоноруван асистент е към Катедра „Пропедевтика на вътрешни болести“, факултет „Медицина“ в СУ „ Св. Климент Охридски“. Автор и съавтор на повече от 50 публикации в национални и международни специализирани научни списания, участвала е в издаването на ръководства, учебни книги, монографии и учебници в областта на лечение  на рак. Автор на две монографии „Имунотерапия и лечение на рак на гърдата“ и „Лекарствена токсичност от имунотерапия при лечението на онкологичните заболявания“. Доц. д-р Николова е и член на редакционни бордове на международни и национални реферирани и индексирани научни издания. Главен изследовател и под-изследовател в международни многоцентрови клинични изпитвания.</p>
+            </div>
+            <div class="about-col">
+                <img src="images/doctor1.jpg" alt="Доц. д-р Виолета Николова">
+            </div>
+        </div>    
+    </section>
+
+    
+
+    <!-------- footer ---------->
+    <section class="footer">
+        <h4>Къде може да откриете Доц. д-р Виолета Николова?</h4>
+        <div>
+            <i class="fa fa-home"></i>
+            <span>
+                <h5 id="office">Отделение "Онкология"</h5>
+                <p id="office-number">Кабинет 14</p>
+            </span>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <span>
+                <h5 id="phone-number">+359 7 813 2491</h5>
+                <p id="working-hours">Приемно време вторник и петък 14:00-16:30ч.</p>
+            </span>
+        </div>
+        <p>направено с <i class="fa fa-heart-o"></i> и грижа за вас!</p>
+    </section>
+
+    <section class="testimonials">
+        <h1>Какво казват нашите пациенти за Доц. д-р Виолета Николова?</h1>
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="images/portrait-female.jpg" alt="Пациент">
+                <div>
+                    <p>Отношението и вниманието към детайла бяха на най-високо ниво. Имах притеснения, но след като попаднах под грижите на д-р Виолета Николова, всички страхове отминаха. Препоръчвам да се доверявате на специалисти, а д-р Петров е именно такъв.</p>
+                    <h3>Елизабет Тодорова</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="images/portrait-male.jpg" alt="Пациент">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus.</p>
+                    <h3>Nickolas King</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---- JavaScript for toggle menu ---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDates();
+        });
+    </script>
+</body>
+</html>

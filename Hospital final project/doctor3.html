@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Болница "Естетик Мед"</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ff6666;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ff6666;
+    }
+</style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="classes.html">Директор</a></li>
+                    <li><a href="patient.html">Пациенти</a></li>
+                    <li class="dropdown">
+                        <a href="departments.html" class="dropbtn">Отделения</a>
+                        <div class="dropdown-content">
+                            <a href="department_surgery.php">Хирургия</a>
+                            <a href="department_cardiology.php">Кардиология</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>   
+        <h1>Отделение "Кардиология"</h1>
+    </section>
+
+<!------- За нас content -------->
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>Проф. Иво Петров</h1>     
+            <p>Проф. д-р Иво Петров, медицински директор и началник Клиника по кардиология и ангиология към Университетска болница Аджибадем Сити клиник. Преподавател, иноватор и пионер в областта на ендоваскуларната терапия в България. Има три специалности - вътрешни болести, интервенционална кардиология и ангиология.
+
+                Проф. Иво Петров е първият инвазивен кардиолог в България, който имплантира ендопротеза при аортна аневризма  и дисекация (вкл. за първи път в света при дете). Извършва първата процедура каротидно стентиране и тромбекстракция на съдове на мозъка за лечение на мозъчен инсулт. Пионер в международен мащаб е за имплантиране на бифуркационни стентове при сложна патология на артериите на сърцето. През 2018 г. извършва първата у нас операция по имплантиране на MitraClip на 83-годишен пациент с митрална стеноза.</p>
+            
+        </div>
+        <div class="about-col">
+            <img src="images/doctor3.jpg">
+        </div>
+    </div>    
+</section>
+
+
+<!-------- footer ---------->
+<section class="footer">
+    <h4> Къде може да откриете проф. д-р Иво Петров?</h4>
+    <div>
+        <i class="fa fa-home"></i>
+        <span>
+            <h5 id="office">Отделение "Кардиология"</h5>
+            <p id="office-number">Кабинет 27</p>
+        </span>
+    </div>
+    <div>
+        <i class="fa fa-phone"></i>
+        <span>
+            <h5 id="phone-number">+359 3 113 4557</h5>
+            <p id="working-hours">Приемно време понеделник и четвъртък 13:00-16:30ч.</p>
+        </span>
+    </div>
+    <p>направено с <i class="fa fa-heart-o"></i> и грижа за вас!</p>
+</section>
+
+<section class="testimonials">
+    <h1>Какво казват нашите пациенти за проф. д-р Иво Петров? </h1>
+    <div class="row">
+        <div class="testimonial-col">
+            <img src="images/portrait-female.jpg">
+            <div> 
+                <p> Отношението и вниманието към детайла бяха на най-високо ниво. Имах притеснения, но след като попаднах под грижите на проф. д-р Иво Петров, всички страхове отминаха. Препоръчвам да се доверявате на специалисти, а д-р Петров е именно такъв.</p>
+                <h3>Елизабет Тодорова</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <img src="images/portrait-male.jpg">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus.</p>
+                <h3>Nickolas King</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----JavaScript for toggle menu and edit forms---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+  
+    document.addEventListener('DOMContentLoaded', function() {
+        updateDates();
+    });
+</script>
+</body>
+</html>

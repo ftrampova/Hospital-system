@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Болница "Естетик Мед"</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    
+    /* Стилове за падащото меню */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ff6666;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ff6666;
+    }
+</style>
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-close" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="classes.html">Директор</a></li>
+                    <li class="dropdown">
+                        <a href="#">Отделения</a>
+                        <div class="dropdown-content">
+                            <a href="department_surgery.php">Хирургия</a>
+                            <a href="department_cardiology.php">Кардиология</a>
+                        </div>
+                    </li>
+                <li><a href="contact.html">Контакти</a></li>
+                <li><a href="Registration.php">Регистрация</a></li>
+                <li><a href="Login.php">Вход</a></li>
+                
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Директор на Болница "Естетик Мед"</h1>
+</section>
+
+<!------- За нас content -------->
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1 id="director-name">Д-р Ивайло Нейков - Директор на Болница "Естетик Мед"</h1>
+            <p id="director-bio">Проф. д-р Ивайло Нейков е утвърден медицински специалист и директор на Болница "Естетик Мед". Завършил е Медицинския университет в София с отличие, след което специализира в областта на кардиологията и инвазивната медицина. През годините д-р Петров се утвърждава като един от водещите специалисти в своята област, благодарение на своята отдаденост и стремеж към постоянно усъвършенстване.<br><br>Той е инициатор на множество проекти за модернизация на болничната база и въвеждането на иновативни методи за диагностика и лечение. Благодарение на неговото лидерство, Болница "Естетик Мед" става пионер в използването на роботизирана хирургия и телемедицина, което значително повишава качеството на обслужване и удовлетвореността на пациентите.<br><br>За д-р Петров здравето и благополучието на пациента винаги са били на първо място. Той вярва, че добрата медицинска практика не се изчерпва само с предоставянето на лечение, но и с грижа, уважение и съпричастност към всеки пациент. <br><br>Д-р Петров е вдъхновяващ лидер, който съчетава професионализъм, иновативност и сърдечност, правейки Болница "Естетик Мед" предпочитано място за лечение и възстановяване.</p>
+        </div>
+        <div class="about-col">
+            <img src="images/director.jpg">
+        </div>
+    </div>
+</section>
+
+<!-------- footer ---------->
+<section class="footer">
+    <h4>Къде може да откриете проф. д-р Ивайло Нейков?</h4>
+    <div>
+        <i class="fa fa-home"></i>
+        <span>
+            <h5>Директор на Болница "Естетик Мед"</h5>
+            <p>Кабинет 1</p>
+        </span>
+    </div>
+    <div>
+        <i class="fa fa-phone"></i>
+        <span id="contact-info">
+            <h5 id="phone-number">+359 7 863 4357</h5>
+            <p id="working-hours">Приемно време понеделник и петък 15:00-17:30.</p>
+        </span>
+        
+    </div>
+    <p>направено с <i class="fa fa-heart-o"></i> и грижа за вас!</p>
+</section>
+
+<!----JavaScript for toggle menu and edit forms---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+    function editDirectorInfo() {
+        document.getElementById("edit-form").style.display = "block";
+        document.getElementById("name").value = document.getElementById("director-name").textContent;
+        document.getElementById("bio").value = document.getElementById("director-bio").innerHTML;
+    }
+
+    function saveDirectorInfo() {
+        var newName = document.getElementById("name").value;
+        var newBio = document.getElementById("bio").value;
+        document.getElementById("director-name").textContent = newName;
+        document.getElementById("director-bio").innerHTML = newBio;
+        document.getElementById("edit-form").style.display = "none";
+    }
+
+    function editContactInfo() {
+        document.getElementById("edit-contact-form").style.display = "block";
+        document.getElementById("phone").value = document.getElementById("phone-number").textContent;
+        document.getElementById("hours").value = document.getElementById("working-hours").textContent;
+    }
+
+    function saveContactInfo() {
+        var newPhone = document.getElementById("phone").value;
+        var newHours = document.getElementById("hours").value;
+        document.getElementById("phone-number").textContent = newPhone;
+        document.getElementById("working-hours").textContent = newHours;
+        document.getElementById("edit-contact-form").style.display = "none";
+    }
+</script>
+</body>
+</html>

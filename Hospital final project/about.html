@@ -1,0 +1,119 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Добре дошли в Болница "Естетик Мед"</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style>
+    
+    /* Стилове за падащото меню */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ff6666;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ff6666;
+    }
+</style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="classes.html">Директор</a></li>
+                    <li class="dropdown">
+                        <a href="#">Отделения</a>
+                        <div class="dropdown-content">
+                            <a href="department_surgery.php">Хирургия</a>
+                            <a href="department_cardiology.php">Кардиология</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="Registration.php">Регистрация</a></li>
+                    <li><a href="Login.php">Вход</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>   
+            <h1>За нас</h1>
+    </section>
+    
+    
+<!------- За нас content -------->
+    
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>Болница "Естетик Мед" е водеща здравна институция, която служи на общността от 2020г</h1>     
+            <p>Разполагаме с дългогодишен опит и висококвалифицирани специалисти, с които се стремим да осигурим най-добрата грижа за нашите пациенти. Ние вярваме, че всеки пациент заслужава най-доброто възможно лечение. Нашата мисия е да предоставяме висококачествени, съвременни медицински услуги, като поставяме пациента в центъра на всичко, което правим. Качеството на грижите е от първостепенно значение за нас.</p>
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194" class="hero-btn red-btn">Посетете ни</a>
+        </div>
+        <div class="about-col">
+            <img src="images/logo.png">
+        </div>
+    </div>    
+</section>
+    
+<!-------- footer ---------->
+
+<section class="footer">
+        <h4> Може да ни намерите и в нашите социални мрежи</h4>
+        
+        <div class="icons">
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194"></a><i class="fa fa-facebook"></i>
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194"></a><i class="fa fa-twitter"></i>
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194"></a><i class="fa fa-instagram"></i>
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194"></a><i class="fa fa-linkedin"></i>
+        </div>
+        <p>направено с <i class="fa fa-heart-o"></i> и грижа за вас!</p>
+</section>    
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+    
+</body>
+</html>    

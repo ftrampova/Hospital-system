@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Болница "Естетик Мед"</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style>
+    /* Стилове за падащото меню */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ff6666;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ff6666;
+    }
+</style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="classes.html">Директор</a></li>
+                    <li class="dropdown">
+                        <a href="#">Отделения</a>
+                        <div class="dropdown-content">
+                            <a href="department_surgery.php">Хирургия</a>
+                            <a href="department_cardiology.php">Кардиология</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="Registration.php">Регистрация</a></li>
+                    <li><a href="Login.php">Вход</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Свържете се с нас</h1>
+    </section>
+
+    <!------- Contact Us ------->
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.368144678623!2d77.55384341419037!3d13.012212417508028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d7f3535d71b%3A0x660d25b66e9fb25c!2sWorld+Trade+Centre!5e0!3m2!1sen!2sin!4v1565255080367!5m2!1sen!2sin" width="720" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5 id="address">Адрес: ул. Здраве</h5>
+                        <p id="city">София, България</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5 id="phone">+359 3 113 4557</h5>
+                        <p id="working-hours">Понеделник-неделя 24/7</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5 id="email">info@estetikmed.bg</h5>
+                        <p id="email-info">Имате допълнителни запитвания? Не се колебайте да ни потърсите на посочения имейл.</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form method="post" action="contact-form-handler.php" id="contact-form">
+                    <input type="text" name="name" placeholder="Въведете вашето име" required>
+                    <input type="email" name="email" placeholder="Въведете вашия имейл адрес" required>
+                    <input type="text" name="subject" placeholder="Въведете темата, която искате да обсъдим" required>
+                    <textarea rows="8" name="message" placeholder="Вашето съобщение" required></textarea>
+                    <button type="submit" class="hero-btn red-btn">Изпрати</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-------- footer ---------->
+    <section class="footer">
+        <h4>За нас</h4>
+        <p>Болница "Естетик Мед" е водеща здравна институция, която служи на общността от 2020г. Посетете ни в нашите социални мрежи.</p>
+        <div class="icons">
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=40PWJXdx194"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <a href="https://www.youtube.com/watch?v=40PWJXdx194" class="footer-link"><p>направено с <i class="fa fa-heart-o"></i> и грижа за вас!</p></a>
+    </section>    
+
+    <!----JavaScript for toggle menu and edit forms---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.submit();
+            setTimeout(function() {
+                location.reload();
+            }, 100);
+        });
+    </script>
+</body>
+</html>
